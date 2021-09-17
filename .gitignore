@@ -1,0 +1,15 @@
+### Python ###
+
+# SSH
+.ssh/*
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Miscellaneous
+.DS_Store
+
+# Data
+*.csv
+*.html
