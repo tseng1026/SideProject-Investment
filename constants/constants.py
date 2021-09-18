@@ -1,29 +1,45 @@
-from enum import Enum
+from constants.enum_extension import ExtendedEnum
 
 
-class DataSource(Enum):
-    BINANCE = "binance"
+class Config(str, ExtendedEnum):
+    API = "api"
+    SYMBOL = "symbol"
+    INTERVAL = "interval"
+    STRATEGY = "strategy"
+    INDICATOR = "indicator"
+    CASH = "cash"
+    COMMISSION = "commission"
 
 
-class CrawlerColumns(Enum):
+class ApiType(ExtendedEnum):
+    BINANCE_API = "BinanceApi"
+    YAHOO_API = "YahooFinanceApi"
+
+
+class StrategyType(ExtendedEnum):
+    CROSSOVER_STRATEGY = "CrossOverStrategy"
+    OVERREACT_STRATEGY = "OverReactStrategy"
+
+
+class IndicatorType(ExtendedEnum):
+    SMA = "SMA"
+    EMA = "EMA"
+    WMA = "WMA"
+    KD = "KD"
+    MACD = "MACD"
+    MFI = "MFI"
+    MTM = "MTM"
+    MTM_MA = "MTM_MA"
+    ROC = "ROC"
+    ROC_MA = "ROC_MA"
+    RSI = "RSI"
+    WILLR = "WILLR"
+
+
+class CrawlerColumns(ExtendedEnum):
     DATETIME = "DateTime"  # millisecond
     OPEN = "Open"
     HIGH = "High"
     LOW = "Low"
     CLOSE = "Close"
     VOLUME = "Volume"
-
-
-class IndicatorType(Enum):
-    SMA = "sma"
-    EMA = "ema"
-    WMA = "wma"
-    KD = "kd"
-    MACD = "macd"
-    MFI = "mfi"
-    MTM = "mtm"
-    MTM_MA = "mtm_ma"
-    ROC = "roc"
-    ROC_MA = "roc_ma"
-    RSI = "rsi"
-    WILLR = "willr"

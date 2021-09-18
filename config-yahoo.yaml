@@ -1,0 +1,6 @@
+api: YahooFinanceApi
+symbol: 2330.TW
+strategy: CrossOverStrategy
+indicator: MACD
+cash: 10000
+commission: 0.001425

@@ -1,0 +1,7 @@
+api: BinanceApi
+symbol: BTCUSDT
+interval: 1m
+strategy: CrossOverStrategy
+indicator: MACD
+cash: 1000000
+commission: 0.
